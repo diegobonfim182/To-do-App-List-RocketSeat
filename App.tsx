@@ -1,20 +1,23 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from 'react-native';
+import Home from './src/screen/HOME';
+
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+  return(
+    <>
+      <StatusBar 
+        barStyle={"light-content"}
+        backgroundColor="transparent"
+        translucent={true}>
+      </StatusBar>
+      <Home></Home>
+    </>
+  )
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+{/* Statusbar serve para alterar a cor dos ícones do celular no topo
+  barstyle altera a cor dos ícones
+  backgrounColor altera a cor do background do topo
+   translucent={true} status bar sobrepor a inferface
+
+*/}
